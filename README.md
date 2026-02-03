@@ -4,28 +4,22 @@ A quick start project for connecting a MySQL database to a Syncfusion Pivot Tabl
 
 ---
 
-## 🚀 Bind MySQL to Syncfusion Pivot Table (Web Quick Start)
-
-[![License](https://img.shields.io/github/license/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table)](https://github.com/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table/blob/master/LICENSE) [![Last Updated](https://img.shields.io/github/last-commit/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table)](https://github.com/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table/commits/master) [![Languages](https://img.shields.io/github/languages/top/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table)](https://github.com/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table)
-
-A compact sample repository that demonstrates connecting MySQL → Web API → Syncfusion Pivot Table across multiple client frameworks. Last Updated: 2026-02-03
-
----
-
 ## 📚 Table of Contents
-- 🔎 Quick overview
-- ✨ Key features
-- 🛠️ Supported technologies & requirements
-- ⚙️ Installation & setup
-- 🧩 Quick code samples
-- 🏗️ Project structure
-- ❓ Troubleshooting & FAQ
-- 🤝 Contributing & license
-- 🔎 SEO & metadata
 
+- [🔎 Project Overview](#-project-overview)
+- [🚀 Quick Start](#-quick-start)
+- [✨ Key Features](#-key-features)
+- [🛠️ Supported Technologies & Requirements](#️-supported-platforms--dependencies)
+- [⚙️ Installation & Setup (quick)](#-installation-setup)
+- [🧩 Quick Code Samples](#-quick-code-samples)
+- [🏗️ Project Structure](#-project-structure)
+- [❓ Troubleshooting & FAQ](troubleshooting--FAQ)
+- [🧪 Testing & CI](#-testing--ci)
+- [🤝 Contributing](#-contributing)
+- [📜 License & Support](#-license--support)
 ---
 
-## 🔎 Quick overview
+## 🔎 Project Overview
 This repository shows how to expose MySQL query results via a Web API and bind the returned JSON to a Syncfusion Pivot Table (PivotView). It includes server-side (.NET) and client-side examples (JS/TS/Angular/React/Vue, plus ASP.NET Core, Blazor, MVC).
 
 Real-world uses:
@@ -35,7 +29,58 @@ Real-world uses:
 
 ---
 
-## ✨ Key features
+## 🚀 Quick Start
+
+Prerequisites
+- MySQL server with sample data
+- .NET SDK 6.0+ (or matching project target)
+- Node.js (for front-end samples)
+- Syncfusion NuGet/npm packages
+
+Run the Web API (`MyWebService`)
+
+```bash
+cd MyWebService
+dotnet restore
+dotnet run
+# API runs on the configured port (see Properties/launchSettings.json)
+```
+
+Run a front-end sample (choose one):
+
+TypeScript
+```bash
+cd Typescript/pivot-table
+npm install
+npm start
+```
+
+Angular
+```bash
+cd Angular/pivot-table
+npm install
+npm start
+```
+
+React
+```bash
+cd React/pivot-table
+npm install
+npm start
+```
+
+Vue
+```bash
+cd VUE/pivot-table
+npm install
+npm run dev
+```
+
+First success: Open the front-end sample URL (e.g., http://localhost:3000 or http://localhost:4200) and confirm the PivotView loads rows from the running Web API.
+
+---
+
+## ✨ Key Features
 - Web API sample that returns MySQL query results as JSON (server-side .NET)
 - Client demos for JavaScript, TypeScript, Angular, React, Vue
 - ASP.NET Core, Blazor, and MVC integration examples
@@ -45,7 +90,7 @@ Real-world uses:
 
 ---
 
-## 🛠️ Supported technologies & requirements
+## 🛠️ Supported Technologies & Requirements
 - Server: .NET (Core) — projects in MyWebService/*.csproj
 - Database: MySQL
 - Client: JavaScript / TypeScript; frameworks: Angular, React, Vue
@@ -63,12 +108,12 @@ Suggested client deps:
 
 ---
 
-## ⚙️ Installation & setup (quick)
+## ⚙️ Installation & Setup (quick)
 Prereqs:
 - MySQL server with sample data
 - .NET SDK 6.0+ (or matching project target)
 - Node.js 14+
-- Syncfusion NuGet/npm packages (license/trial as required)
+- Syncfusion NuGet/npm packages
 
 Steps:
 1. Clone:
@@ -194,31 +239,42 @@ pivotTableObj.appendTo('#PivotTable');
 
 ---
 
-## 🤝 Contributing & license
-Contributions: open issues or PRs; keep changes scoped and include reproduction steps.  
-License: see LICENSE in repo root.
+## 🧪 Testing & CI
+
+- Add GitHub Actions to build the Web API and optionally run front-end builds per sample. Suggested jobs:
+	- `dotnet restore` / `dotnet build` / `dotnet test`
+	- `npm ci` / `npm run build` for front-end samples
 
 ---
 
-## 🔎 SEO & metadata
-Meta description (<=160 chars): "Example showing how to bind a MySQL database to a Syncfusion Pivot Table via a Web API with JS/TS/Angular/React/Vue and .NET samples."  
+## 🤝 Contributing
 
-Suggested primary keywords:
-- Syncfusion Pivot Table
-- MySQL Pivot binding
-- PivotView MySQL example
+Contributions welcome. Suggested workflow:
+1. Fork and create a branch `feature/<desc>`
+2. Run the Web API locally and test sample clients
+3. Open a PR with description, screenshots, and testing steps
 
-Suggested GitHub topics:
-syncfusion, pivot-table, mysql, dotnet, aspnet-core, javascript, typescript, angular, react, vue, blazor, mvc, pivotview, analytics, dashboard
+## 📜 License & Support
 
-Suggested README badges (example markdown):
-```markdown
-[![License](https://img.shields.io/github/license/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table)](./LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table)]()
-[![Languages](https://img.shields.io/github/languages/top/SyncfusionExamples/web-bind-MySQL-database-to-pivot-table)]()
-```
+This is a **commercial product** subject to the Syncfusion End User License Agreement (EULA).
 
----
+**Free Community License** is available for qualifying users/organizations:  
+- Annual gross revenue < $1 million USD  
+- 5 or fewer total developers  
+- 10 or fewer total employees  
 
-## 📌 Last updated
-2026-02-03
+The community license allows free use in both internal and commercial applications under these conditions.  
+No registration or approval is required — just comply with the terms.
+
+**Paid Licenses** are required for:  
+- Larger organizations  
+- Teams exceeding the community license limits  
+- Priority support, custom patches, or on-premise deployment options  
+
+Purchase options and pricing: https://www.syncfusion.com/sales/products  
+30-day free trial (full features, no credit card required): https://www.syncfusion.com/downloads/essential-js2  
+Community License details & FAQ: https://www.syncfusion.com/products/communitylicense  
+Full EULA: https://www.syncfusion.com/eula/es/
+
+© 2026 Syncfusion, Inc. All Rights Reserved.
+
